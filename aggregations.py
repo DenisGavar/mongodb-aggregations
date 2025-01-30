@@ -28,8 +28,6 @@ pipeline = [
         "$match": {
             "year": {"$gte": 2010},  # Filter movies from 2010+
             "imdb.rating": {
-                "$exists": True,
-                "$ne": None,
                 "$type": "number",
             },  # Filter movies with rating
         }
@@ -131,8 +129,6 @@ pipeline = [
     {
         "$match": {
             "imdb.rating": {
-                "$exists": True,
-                "$ne": None,
                 "$type": "number",
             },  # Filter movies with rating
         }
